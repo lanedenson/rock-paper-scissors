@@ -1,8 +1,8 @@
-//Define the three options
-const choices = ["Rock", "Paper", "Scissors"]; 
+function getComputerChoice() {
+    choices = ["Rock", "Paper", "Scissors"]; 
+    return choices[Math.floor(Math.random()*3)]; 
+}
 
-//Generate a random number between 0 and 2; these correspond with the choices array above.  Assign to getComputerChoice
-let getComputerChoice = choices[Math.floor(Math.random()*3)]; 
+console.log(getComputerChoice());
 
-//Display the computer choice in the console
-console.log(getComputerChoice);
+const computerSelection = getComputerChoice;
