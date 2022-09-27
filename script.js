@@ -1,29 +1,33 @@
 "use strict";
 
-const choices = ["Rock", "Paper", "Scissors"];
-const playerSelection = "Rock";
+const choices = ["rock", "paper", "scissors"];
+const getPlayerSelection = "RoCk";
+let playerSelection = getPlayerSelection.toLowerCase();
+let computerSelection = getComputerChoice().toLowerCase();
 
 function getComputerChoice() {
     return choices[Math.floor(Math.random() * 3)];
 }
 
-function playRound() {
-    if ((playerSelection === "Rock" && computerSelection === "Paper") ||
-        (playerSelection === "Scissors" && computerSelection === "Rock") ||
-        (playerSelection === "Paper" && computerSelection === "Scissors")
+function playRound(playerSeiection, computerSelection) {
+    if ((playerSelection === "rock" && computerSelection === "paper") ||
+        (playerSelection === "scissors" && computerSelection === "rock") ||
+        (playerSelection === "paper" && computerSelection === "scissors")
     ) {
         return ("You lose! " + computerSelection + " beats " + playerSelection + ".");
-    } else if ((playerSelection === "Paper" && computerSelection === "Rock") ||
-        (playerSelection === "Rock" && computerSelection === "Scissors") ||
-        (playerSelection === "Scissors" && computerSelection === "Paper")) {
+    } else if ((playerSelection === "paper" && computerSelection === "rock") ||
+        (playerSelection === "rock" && computerSelection === "scissors") ||
+        (playerSelection === "scissors" && computerSelection === "paper")) {
         return ("You win! " + playerSelection + " beats " + computerSelection + ".");
     } else {
         return ("It's a tie!");
     }
 }
 
-let computerSelection = getComputerChoice();
+for (let i = 0; i < 5; i++) {
+    // your code here!
+ }
 
 console.log("Computer: " + computerSelection + ". Player: " + playerSelection + ".");
 
-console.log(playRound());
+console.log(playRound(playerSelection, computerSelection));
