@@ -16,7 +16,8 @@ function playRound(playerSeiection, computerSelection) {
         (playerSelection === "paper" && computerSelection === "scissors")
     ) {
         computerScore++;
-        return ("You lose! " + computerSelection + " beats " + playerSelection + ".");
+        return ("You lose! " + computerSelection
+            + " beats " + playerSelection + ".");
     } 
     
     else if ((playerSelection === "paper" && computerSelection === "rock") ||
@@ -24,7 +25,8 @@ function playRound(playerSeiection, computerSelection) {
         (playerSelection === "scissors" && computerSelection === "paper")
     ) {
         playerScore++;
-        return ("You win! " + playerSelection + " beats " + computerSelection + ".");
+        return ("You win! " + playerSelection
+            + " beats " + computerSelection + ".");
     } 
     
     else if (playerSeiection === computerSelection) {
@@ -42,9 +44,9 @@ function game() {
         let computerSelection = getComputerChoice().toLowerCase();
         getPlayerSelection = prompt("Rock, Paper, or Scissors?");
         playerSelection = getPlayerSelection.toLowerCase();
-        //console.log("Computer: " + computerSelection + ". Player: " + playerSelection + ".");
         console.log(playRound(playerSelection, computerSelection));
-        console.log("Computer score: " + computerScore + ". Player score: " + playerScore + ".");
+        console.log("Computer score: " + computerScore + ". Player score: "
+            + playerScore + ".");
     }
 }
 
