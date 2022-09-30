@@ -1,12 +1,13 @@
 "use strict";
 
+//Define the initial variables, including the array for rock paper scissors
 const choices = ["rock", "paper", "scissors"];
 let computerScore = 0;
 let playerScore = 0;
 let playerSelectionInput;
 let playerSelection;
 
-//Generate a random number between 0-2 and the associated choice from the array
+//Generate a random number between 0-2 and the associated choice from array
 function getComputerChoice() {
     return choices[Math.floor(Math.random() * 3)];
 }
@@ -35,10 +36,12 @@ function playRound(playerSeiection, computerSelection) {
     }
 }
 
+//Define game loop. Play five rounds and display the score at the end of each.
+//I'm sure this could be streamlined significantly.  Use => ??
 function game() {
     for (let i = 0; i < 5; i++) {
         getComputerChoice();
-        let computerSelection = getComputerChoice().toLowerCase();
+        computerSelection = getComputerChoice();
         playerSelectionInput = prompt("Rock, Paper, or Scissors?");
         playerSelection = playerSelectionInput.toLowerCase();
         console.log(playRound(playerSelection, computerSelection));
@@ -46,4 +49,5 @@ function game() {
     }
 }
 
+//Run the game.
 game();
