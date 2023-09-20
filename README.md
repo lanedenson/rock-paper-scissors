@@ -3,7 +3,7 @@ The Odin Project "Rock Paper Scissors" exercise
 
 https://www.theodinproject.com/lessons/foundations-rock-paper-scissors
 
-Still several issues:
+Still several issues/enhancements:
 - Should display instructions before browser prompt
 - Needs better error handling
 - Provide results on page rather than console
