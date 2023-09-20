@@ -12,7 +12,7 @@ function getComputerChoice() {
     return choices[Math.floor(Math.random() * 3)];
 }
 
-/* Play a round. First, check for a tie. 
+/* Play a round. First, check for a tie.
 Next, see if the computer won. If so, increase computer score by 1.
 Then, check if the player won. If so, increase player score by 1.
 Otherwise, indicate the player made an invalid selection. */
@@ -41,7 +41,7 @@ function playRound(playerSeiection, computerSelection) {
 function game() {
     for (let i = 0; i < 5; i++) {
         getComputerChoice();
-        computerSelection = getComputerChoice();
+        let computerSelection = getComputerChoice();
         playerSelectionInput = prompt("Rock, Paper, or Scissors?");
         playerSelection = playerSelectionInput.toLowerCase();
         console.log(playRound(playerSelection, computerSelection));
